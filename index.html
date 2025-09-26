@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel left-panel">
+            <h2>🎮 Game Settings</h2>
+            
+            <div class="form-group">
+                <label for="player1Name">Player 1 Name:</label>
+                <input type="text" id="player1Name" placeholder="Enter your name" value="Player 1">
+            </div>
+            
+            <div class="form-group">
+                <label for="player2Name">Player 2 Name:</label>
+                <input type="text" id="player2Name" placeholder="Enter player 2 name" value="Computer" disabled>
+            </div>
+            
+            <div class="game-mode-selector">
+                <label>Game Mode:</label>
+                <div>
+                    <button class="mode-btn active" data-mode="pvc">Player vs Computer</button>
+                    <button class="mode-btn" data-mode="pvp">Player vs Player</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="gameVariant">Game Variant:</label>
+                <select id="gameVariant">
+                    <option value="classic">Rock Paper Scissors</option>
+                    <option value="extended" selected>Rock Paper Scissors Lizard Spock</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="rounds">Best of:</label>
+                <select id="rounds">
+                    <option value="3">3 Rounds</option>
+                    <option value="5" selected>5 Rounds</option>
+                    <option value="7">7 Rounds</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="timer">Turn Timer (seconds):</label>
+                <select id="timer">
+                    <option value="0">No Timer</option>
+                    <option value="5">5 seconds</option>
+                    <option value="10" selected>10 seconds</option>
+                    <option value="15">15 seconds</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="soundEnabled" checked>
+                    Enable Sound Effects
+                </label>
+            </div>
+            
+            <button class="btn" id="startGame">🚀 Start New Game</button>
+        </div>
+
+        <div class="game-area">
+            <div class="game-title">Rock Paper Scissors Lizard Spock</div>
+            
+            <div class="players-display">
+                <div class="player-section">
+                    <div class="player-name" id="displayPlayer1">Player 1</div>
+                    <div class="player-choice" id="player1Choice">❓</div>
+                </div>
+                
+                <div class="vs">VS</div>
+                
+                <div class="player-section">
+                    <div class="player-name" id="displayPlayer2">Computer</div>
+                    <div class="player-choice" id="player2Choice">❓</div>
+                </div>
+            </div>
+            
+            <div class="timer-display" id="timerDisplay"></div>
+            
+            <div class="choices" id="choicesContainer">
+                <button class="choice-btn" data-choice="rock">🗿</button>
+                <button class="choice-btn" data-choice="paper">📄</button>
+                <button class="choice-btn" data-choice="scissors">✂️</button>
+                <button class="choice-btn" data-choice="lizard">🦎</button>
+                <button class="choice-btn" data-choice="spock">🖖</button>
+            </div>
+            
+            <div class="game-controls">
+                <button class="btn hidden" id="nextRoundBtn">Next Round</button>
+                <button class="btn" id="resetGameBtn">🔄 Reset Game</button>
+            </div>
+            
+            <div class="result-message hidden" id="resultMessage"></div>
+        </div>
+
+        <div class="panel right-panel">
+            <div class="score-display">
+                <h2>🏆 Current Score</h2>
+                <div id="scoreDisplay">
+                    <div><span id="scorePlayer1">0</span> - <span id="scorePlayer2">0</span></div>
+                    <div>Round <span id="currentRound">1</span> of <span id="totalRounds">5</span></div>
+                </div>
+            </div>
+            
+            <div class="leaderboard">
+                <h2>📊 Leaderboard</h2>
+                <div id="leaderboardList">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>Created by <a href="https://www.sudiptaroy.info/" target="_blank">Sudipta Roy Akash</a></p>
+        <div class="social-links">      
+            <a href="https://github.com/devsudipta" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sudiptaroyakash/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/sudiptaroyakash" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/sudiptaroy.info" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <div id="victoryModal" class="modal">
+        <div class="modal-content">
+            <h2 id="victoryTitle">🎉 Game Over!</h2>
+            <p id="victoryMessage">Congratulations!</p>
+            <button class="btn" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

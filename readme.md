@@ -1,14 +1,8 @@
 # 🚀 Rock, Paper, Scissors, Lizard, Spock - The Ultimate Showdown
 
-![Game Banner](<INSERT YOUR BANNER/MAIN SCREENSHOT URL HERE>)
+
 
 A feature-rich, browser-based implementation of the classic game, extended with "Lizard" and "Spock". This game is built with vanilla JavaScript, HTML, and CSS, featuring multiple game modes, a challenging adaptive AI, and a clean, modern interface.
-
----
-
-## ✨ Live Demo
-
-Check out the live version of the game here: **[Live Demo Link](https://devsudipta.github.io/your-repo-name/)** *(Replace with your actual GitHub Pages link)*
 
 ---
 
@@ -87,5 +81,6 @@ This project was created by **Sudipta Roy Akash**.
 ---
 
 ## 📄 License
+
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
